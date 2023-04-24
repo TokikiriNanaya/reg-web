@@ -14,8 +14,8 @@ import moment from 'moment'
 const app = createApp(App)
 
 // 配置请求根路径
-axios.defaults.baseURL = 'http://localhost:2334' //本地
-// axios.defaults.baseURL = 'http://api.kiriya.top' //服务器
+// axios.defaults.baseURL = 'http://localhost:2334' //本地
+axios.defaults.baseURL = 'http://api.kiriya.top' //服务器
 // 将axios作为全局的自定义属性，每个组件可以在内部直接访问(vue3)
 
 

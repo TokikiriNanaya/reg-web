@@ -15,7 +15,7 @@
                     <template #default="scope">
                         <div>
                             <!-- 使用moment格式化时间 -->
-                            {{ this.$moment(scope.row.createTime).format('YYYY-MM-DD h:mm:ss') }}
+                            {{ this.$moment(scope.row.createTime).format('YYYY-MM-DD HH:mm:ss') }}
                         </div>
                     </template>
                 </el-table-column>/>
@@ -23,7 +23,7 @@
                     <template #default="scope">
                         <div>
                             <!-- 使用moment格式化时间 -->
-                            {{ this.$moment(scope.row.activeTime).format('YYYY-MM-DD h:mm:ss') }}
+                            {{ this.$moment(scope.row.activeTime).format('YYYY-MM-DD HH:mm:ss') }}
                         </div>
                     </template>
                 </el-table-column>/>
@@ -31,7 +31,7 @@
                     <template #default="scope">
                         <div>
                             <!-- 使用moment格式化时间 -->
-                            {{ this.$moment(scope.row.lastUseTime).format('YYYY-MM-DD h:mm:ss') }}
+                            {{ this.$moment(scope.row.lastUseTime).format('YYYY-MM-DD HH:mm:ss') }}
                         </div>
                     </template>
                 </el-table-column>/>
@@ -49,7 +49,7 @@
                     <template #default="scope">
                         <div v-show="!scope.row.isEdit">
                             <!-- 使用moment格式化时间 -->
-                            {{ this.$moment(scope.row.expiryTime).format('YYYY-MM-DD h:mm:ss') }}
+                            {{ this.$moment(scope.row.expiryTime).format('YYYY-MM-DD HH:mm:ss') }}
                         </div>
                         <!-- 编辑状态下 -->
                         <el-date-picker v-if="scope.row.isEdit" v-model="scope.row.expiryTime" type="datetime"
@@ -96,8 +96,8 @@
                 </el-table-column>/>
                 <el-table-column prop="tool" label="操作" width="140">
                     <template #default="scope">
-                        <el-button size="small" type="primary" @click="handleEdit(scope.$index, scope.row)">{{
-                            scope.row.isEdit ? "保存" : "编辑" }}</el-button>
+                        <el-button size="small" type="primary" @click="handleEdit(scope.$index, scope.row)">
+                            {{scope.row.isEdit ? "保存" : "编辑" }}</el-button>
                         <el-button size="small" @click="handleDelete(scope.$index, scope.row)" type="danger">删除</el-button>
                     </template>
                 </el-table-column>/>

@@ -15,7 +15,7 @@
                     <template #default="scope">
                         <div>
                             <!-- 使用moment格式化时间 -->
-                            {{ this.$moment(scope.row.use_time).format('YYYY-MM-DD h:mm:ss') }}
+                            {{ this.$moment(scope.row.use_time).format('YYYY-MM-DD HH:mm:ss') }}
                         </div>
                     </template>
                 </el-table-column>/>
